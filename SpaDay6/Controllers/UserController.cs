@@ -28,9 +28,11 @@ namespace SpaDay6.Controllers
             }
             else
             {
+                ViewBag.Password = newUser.Password;
+                ViewBag.verify = verify;
                 ViewBag.error = "Passwords do not match! Try again!";
                 ViewBag.userName = newUser.Username;
-                ViewBag.eMail = newUser.Email;
+                ViewBag.email = newUser.Email;
                 return View("Add");
             }
         }
